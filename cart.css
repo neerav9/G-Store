@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+}
+.second-half{
+    background-image: url("image.jpg");
+    background-size:contain;
+    height: max-content;
+}
+.navbar {
+    display: flex;
+    /* background-color: #86B499; */
+    /* background-color: #d39797; */
+    background-color:maroon;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 5%;
+}
+
+.logo {
+    flex: 1;
+}
+
+.logo a {
+    color:white;
+    text-decoration: none;
+    font-size: 150%;  /* Equivalent to 1.5em */
+    font-weight: bold;
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 2%;
+    display: flex;
+    align-items: center;
+}
+
+.center-nav {
+    flex: 1;
+    justify-content:space-around;
+}
+
+.right-nav {
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.nav-item {
+    margin: 0 2%;  /* Added margin for spacing between items */
+}
+
+.center-nav .nav-item {
+    margin: 0 5%;  /* Increase space between center nav items */
+}
+
+.right-nav .nav-item {
+    margin: 0 10%; 
+}
+
+.nav-item a {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    padding: 7px; /* Restore padding */
+    transition: background-color 0.3s, width 0.3s, height 0.3s;
+    font-size: large;
+    }
+
+.nav-item a:hover {
+    background-color: #ddd;
+    color: black;
+    border-radius: 10px;
+}
+
+.icon-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px; /* Set a fixed width */
+    height: 30%; /* Set a fixed height */
+    border-radius: 50%; /* Make the element circular */
+    overflow: hidden; /* Ensure the icon remains within the circle */
+}
+
+.icon-circle i {
+    margin: 0; /* Remove default margin */
+}
+
+
+.item{
+    width: 90%;
+    background-color: #ddd;
+    display: flex;
+    height: 200px;
+    margin: 3% auto;
+    padding: 2%;
+    border-radius: 20px;
+    flex-direction: row;
+    justify-content:space-evenly;
+ }
+
+ .price>.names{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: auto;
+ }
+
+ .names>a{
+    font-size: xx-large;
+    color: #333;
+ }
+
+ .delete-cart{
+    font-size: x-large;
+    color: #333;
+    border-radius: 10px;
+    padding: 2% 3%;
+    background-color: transparent;
+    border: 0;
+ }
+
+ .delete-cart:hover{
+    border: solid black;
+    color:black;
+    background-color:#ce3434;
+}
+
+.buy-now {
+    display: block;
+    padding: 10px;
+    background-color: #00ff26;
+    color: #251f1f;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    width: 150px; /* Set a fixed width */
+    margin: 20px auto 0; /* Center the button and add margin at the top */
+}
+ .buy-now{
+    margin-bottom:2%;
+ }

@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Java Programming",
+    "author": "E Balaguruswamy",
+    "price": 135,
+    "image": "https://m.media-amazon.com/images/I/51xiwRkS2oL.jpg",
+    "description": "It is a very nice book and has good understading of the oops knowledge",
+    "pageCount": 230,
+    "copyCount": 4,
+    "bookCondition": "used",
+    "category": "Placements",
+    "id": 2
+  },
+  {
+    "title": "C Programming",
+    "author": "Darrel .L Graham",
+    "price": 279,
+    "image": "https://m.media-amazon.com/images/I/91-l2iv-4hL._SL1500_.jpg",
+    "description": "It is a good book",
+    "pageCount": 400,
+    "copyCount": 1,
+    "bookCondition": "new",
+    "category": "UPSC",
+    "id": 3
+  },
+  {
+    "title": "Data Structures and algorithms",
+    "author": "Narasimha Karumanchi",
+    "price": 499,
+    "image": "https://m.media-amazon.com/images/I/714+tgyHDRL._SL1360_.jpg",
+    "description": "It has very good concepts and the book is overall an excellent one",
+    "pageCount": 300,
+    "copyCount": 3,
+    "bookCondition": "new",
+    "category": "GATE",
+    "id": 4
+  },
+  {
+    "title": "Programming with python",
+    "author": "Reema Thareja",
+    "price": 349.98,
+    "image": "https://m.media-amazon.com/images/I/4168m14VJeL._SY445_SX342_.jpg",
+    "description": "It is a good book",
+    "pageCount": 200,
+    "copyCount": 2,
+    "bookCondition": "new",
+    "category": "GATE",
+    "id": 5
+  }
+]

@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+}
+.second-half{
+    background-image: url("image.jpg");
+    background-size:contain;
+}
+.navbar {
+    display: flex;
+    /* background-color: #86B499; */
+    /* background-color: #d39797; */
+    background-color:maroon;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 5%;
+}
+
+.logo {
+    flex: 1;
+}
+
+.logo a {
+    color:white;
+    text-decoration: none;
+    font-size: 150%;  /* Equivalent to 1.5em */
+    font-weight: bold;
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 2%;
+    display: flex;
+    align-items: center;
+}
+
+.center-nav {
+    flex: 1;
+    justify-content:space-around;
+}
+
+.right-nav {
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.nav-item {
+    margin: 0 2%;  /* Added margin for spacing between items */
+}
+
+.center-nav .nav-item {
+    margin: 0 5%;  /* Increase space between center nav items */
+}
+
+.right-nav .nav-item {
+    margin: 0 10%; 
+}
+
+.nav-item a {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    padding: 7px; /* Restore padding */
+    transition: background-color 0.3s, width 0.3s, height 0.3s;
+    font-size: large;
+    }
+
+.nav-item a:hover {
+    background-color: #ddd;
+    color: black;
+    border-radius: 10px;
+}
+
+.profile-section, .details-section {
+    margin: 2%; /* Adjusted for percentage */
+}
+
+.profile-box, .details-box {
+    background-color: #e0e0e0; /* Change the color as desired */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 2%; /* Adjusted for percentage */
+    box-shadow: 0 0 1% rgba(0, 0, 0, 0.1); /* Adjusted for percentage */
+}
+
+.profile-info {
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+.profile-name {
+    margin-right: 15%; /* Adjusted for percentage */
+}
+.content-box {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 0.5% ;/* Adjusted for percentage */
+    margin-right: 1%; /* Adjusted for percentage */
+    width:38vh;
+    height:14vh;
+    margin-right: 5%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.profile-details {
+    flex-grow: 1;
+}
+
+.profile-details h2 {
+    margin-bottom: 1%;
+}
+
+.content-container {
+    display: flex;
+}
+
+.details-box {
+    margin-top: 5%;
+    padding: 2%;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.detail-item span {
+    font-weight: bold;
+    width: 200px; /* Adjust the width as needed */
+}
+
+.detail-content {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 5px;
+    flex-grow: 1;
+}

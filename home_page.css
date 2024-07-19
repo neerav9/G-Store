@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+}
+.second-half{
+    background-image: url("background_image_home_page.jpeg");
+    background-size: contain;
+}
+.navbar {
+    display: flex;
+    background-color: #333;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 5%;
+}
+
+.logo {
+    flex: 1;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 150%;  /* Equivalent to 1.5em */
+    font-weight: bold;
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.center-nav {
+    flex: 3;
+    justify-content: center;
+}
+
+.right-nav {
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.nav-item {
+    margin: 0 2%;  /* Added margin for spacing between items */
+}
+
+.center-nav .nav-item {
+    margin: 0 5%;  /* Increase space between center nav items */
+}
+
+.right-nav .nav-item {
+    margin: 0 10%; 
+}
+
+.nav-item a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    padding: 7px; /* Restore padding */
+    transition: background-color 0.3s, width 0.3s, height 0.3s;
+    }
+
+.nav-item a:hover {
+    background-color: #ddd;
+    color: black;
+    border-radius: 20px;
+}
+
+.icon-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px; /* Set a fixed width */
+    height: 40px; /* Set a fixed height */
+    border-radius: 50%; /* Make the element circular */
+    overflow: hidden; /* Ensure the icon remains within the circle */
+}
+
+.icon-circle i {
+    margin: 0; /* Remove default margin */
+}
+
+
+
+.header-content {
+    text-align: center;
+    padding-top: 2%;
+    color: white;
+}
+
+.header-content h1 {
+    font-size: 250%;  /* Equivalent to 2.5em */
+    margin-bottom: 2%;
+}
+
+.header-content p {
+    font-size: 120%;
+    line-height: 60%;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:56vh;
+    padding-top:0%; 
+}
+
+.main-box {
+    width: 70%;
+    height: 70%;
+    padding: 2%;
+    /* background-color: #333; */ /* Remove background color */
+    /* background-color: rgba(51, 51, 51, 0.5); Set partially transparent background color */
+    border-radius: 2%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.inner-box {
+    width: 25%;
+    padding: 2%;
+    /* background-color: #ccc; */ /* Remove background color */
+    background-color: rgba(204, 204, 204, 0.7); /* Set partially transparent background color */
+    border-radius: 2%;
+    text-align: center;
+    color: black; /* Add text color */
+}
+
+.sub_heading{
+    font-weight: 1000;
+}

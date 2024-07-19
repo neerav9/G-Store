@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="big">
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="logo">
+                <a href="product.html">Logo</a>
+            </div>
+            <ul class="nav-list center-nav">
+                <li class="nav-item"><a href="products.html">Products</a></li>
+                <li class="nav-item"><a href="post.html">Sell</a></li>
+                <li class="nav-item"><a href="index.html#login">Login</a></li>
+            </ul>
+            <ul class="nav-list right-nav">
+                <li class="nav-item"><a href="profile.html"><span class="icon-circle"><i class="bi bi-person-circle"></i></span></a></li>
+                <li class="nav-item"><a href="cart.html"><span class="icon-circle"><i class="bi bi-cart4"></i></span></a></li>
+            </ul>
+        </nav>
+        <div class="cart-items">
+            <h1 align="center">Cart Items</h1>
+            <div id="cart-container"></div>
+            <button id="buy-now" class="buy-now">Buy Now</button>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cartContainer = document.getElementById('cart-container');
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            if (cart.length === 0) {
+                cartContainer.innerHTML = '<p>Your cart is empty.</p>';
+            } else {
+                cart.forEach((item, index) => {
+                    const itemDiv = document.createElement('div');
+                    itemDiv.classList.add('item');
+                    
+                    itemDiv.innerHTML = `
+                        <div class="names">
+                            <a href="#">${item.title}</a>
+                            <h2>By ${item.author}</h2>
+                        </div>
+                        <div class="price">
+                            <h1>Price</h1>
+                            <h2>Rs. ${item.price}</h2>
+                        </div>
+                        <div class="img">
+                            <img src="${item.image}" height="100%" width="100%">
+                        </div>
+                        <button class="delete-cart" data-index="${index}">Delete</button>
+                    `;
+                    
+                    cartContainer.appendChild(itemDiv);
+                });
+
+                // Add event listeners for delete buttons
+                const deleteButtons = document.querySelectorAll('.delete-cart');
+                deleteButtons.forEach(button => {
+                    button.addEventListener('click', (event) => {
+                        const itemIndex = event.target.getAttribute('data-index');
+                        deleteCartItem(itemIndex);
+                    });
+                });
+            }
+
+            // Buy Now button functionality
+            const buyNowButton = document.getElementById('buy-now');
+            buyNowButton.addEventListener('click', () => {
+                buyNow();
+            });
+        });
+
+        function deleteCartItem(index) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            location.reload();  // Reload the page to update the cart display
+        }
+
+        function buyNow() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            if (cart.length === 0) {
+                alert('Your cart is empty.');
+                return;
+            }
+
+            fetch('/buyNow', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(cart)
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert('Congrats on your purchase!');
+                localStorage.removeItem('cart');
+                location.reload();  // Reload the page to update the cart display
+            })
+            .catch(error => {
+                console.error('Error processing purchase:', error);
+            });
+        }
+    </script>
+</body>
+</html>
